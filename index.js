@@ -9,6 +9,7 @@ function submitNewNote(e) {
   formData.forEach((value, key) => json[key] = value)
   clearInputs()
   console.log(json)
+  appendNote(json)
 }
 
 function clearInputs() {
@@ -18,3 +19,17 @@ function clearInputs() {
   message.value = ''
 }
 
+function appendNote(note) {
+  const notes = document.querySelector('ul')
+  const newNote = document.createElement('li')
+  newNote.classList.add('note')
+
+  const name = document.createElement('h3')
+  name.innerText = note.name
+
+  const message = document.createElement('p')
+  message.innerText = note.message
+
+  newNote.append(name, message);
+  notes.append(newNote);
+}
