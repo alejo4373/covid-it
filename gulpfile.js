@@ -1,10 +1,14 @@
-const gulp = require('gulp');
+const { watch, src, dest } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 
-exports.default = (done) => {
-  gulp.src('src/index.css')
+const autoprefixCss = (done) => {
+  src('src/index.css')
     .pipe(autoprefixer({ cascade: false }))
-    .pipe(gulp.dest('dist'))
+    .pipe(dest('dist'))
 
   done()
+}
+
+exports.default = (done) => {
+  watch('src/*.css', autoprefixCss)
 }
