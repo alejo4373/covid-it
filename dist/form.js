@@ -14,7 +14,7 @@ function submitNewNote(e) {
 
 function clearInputs() {
   const name = document.querySelector('input[name="name"]')
-  const message = document.querySelector('input[name="message"]')
+  const message = document.querySelector('textarea[name="message"]')
   name.value = ''
   message.value = ''
 }
@@ -24,12 +24,12 @@ function appendNote(note) {
   const newNote = document.createElement('li')
   newNote.classList.add('note')
 
-  const name = document.createElement('h3')
+  const name = document.createElement('h5')
   name.innerText = note.name
 
   const message = document.createElement('p')
   message.innerText = note.message
 
-  newNote.append(name, message);
+  newNote.append(message, name);
   notes.append(newNote);
 }
