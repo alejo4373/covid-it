@@ -79,7 +79,7 @@ form fieldset {
 form textarea, form input[type="text"] {
   width: 100%;
   background-color: #ffffcc;
-  border: 1px solid #00000011;
+  border: 0
 }
 
 form textarea {
