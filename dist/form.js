@@ -2,46 +2,6 @@
 const form = document.querySelector('form')
 form.addEventListener('submit', submitNewNote)
 
-handleHashRouteChange() // Handle someone following a link with a hash
-window.addEventListener('hashchange', handleHashRouteChange)
-
-function handleHashRouteChange(e) {
-  let prevLocation = '';
-
-  if (e) {
-    prevLocation = e.oldURL.split('#')[1]
-  }
-
-  if (prevLocation) {
-    hideComponent(prevLocation)
-  }
-
-  const location = window.location.hash.slice(1)
-  console.log(window.location)
-  switch (location) {
-    case 'ilearned':
-      showComponent(location)
-      break;
-
-    case 'iwanttodo':
-      showComponent(location)
-      break;
-
-    default:
-      console.log('default', location)
-  }
-}
-
-function hideComponent(location) {
-  let component = document.querySelector('#' + location)
-  component.hidden = true
-}
-
-function showComponent(location) {
-  let component = document.querySelector('#' + location)
-  component.hidden = false
-}
-
 function submitNewNote(e) {
   e.preventDefault()
 
@@ -49,7 +9,6 @@ function submitNewNote(e) {
   const json = {}
   formData.forEach((value, key) => json[key] = value)
   clearInputs()
-  console.log(json)
   appendNote(json)
 }
 
