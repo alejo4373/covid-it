@@ -15,6 +15,26 @@ body {
   font-size: 100%
 }
 
+main fieldset {
+  border: 20px groove #e7bd83;
+  width: 80%;
+  margin: 0 auto;
+}
+
+main fieldset legend {
+  margin: 0 20px;
+  font-size: 2em;
+  padding: 0 20px
+}
+
+main fieldset legend h2 {
+  font-family: 'Rock Salt', cursive;
+  font-weight: lighter;
+  color: #f0325f;
+  text-shadow: 1px 3px 4px #8c419f;
+  line-height: 1.2em;
+}
+
 h5, p {
   font-size: 100%;
   font-weight: normal;
