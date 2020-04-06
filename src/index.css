@@ -15,6 +15,27 @@ body {
   font-size: 100%
 }
 
+.landing {
+  font-size: 3em;
+  /* width: 70%; */
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.landing h2, .landing h1 {
+  color: white;
+  text-shadow: 1px 3px 4px #79298e;
+  font-family: 'Rock Salt', cursive;
+}
+
+.landing nav a {
+  font-weight: lighter;
+  font-family: 'Reenie Beanie', cursive;
+  color: #f0325f;
+  text-shadow: 1px 3px 4px #8c419f;
+  /* line-height: 1.2em; */
+}
+
 main fieldset {
   border: 20px groove #e7bd83;
   width: 80%;
