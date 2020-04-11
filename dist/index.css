@@ -11,26 +11,30 @@ body {
   font-size: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .landing, .section {
   height: 100%;
 }
 
 .landing {
-  font-size: 3em;
   background: linear-gradient(90deg, #f7315f,#d7385e);
+
+}
+
+.landing main {
+  font-size: 3em;
+  height: 95%;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.landing main {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  text-align: center;
-}
-
-.landing main h2, .landing main h1 {
+.landing main h2, .landing main h1, footer a {
   color: white;
   text-shadow: 1px 3px 4px #79298e;
   font-family: 'Rock Salt', cursive;
@@ -48,8 +52,6 @@ body {
   font-family: 'Reenie Beanie', cursive;
   color:#323336; 
   text-shadow: 1px 3px 4px #8c419f;
-  text-decoration: none;
-  /* line-height: 1.2em; */
 }
 
 .landing main p {
@@ -59,6 +61,20 @@ body {
   margin: 1em;
 }
 
+.landing footer {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  background-color: #323336; 
+  color: whitesmoke;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.landing footer a {
+  font-size: 0.7em
+}
 .section {
   background: 
     linear-gradient(rgb(239, 211, 159, 0.5),rgba(239, 211, 159, 0.3)), 
