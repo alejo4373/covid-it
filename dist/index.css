@@ -18,18 +18,32 @@ body {
 .landing {
   font-size: 3em;
   background: linear-gradient(90deg, #f7315f,#d7385e);
-  /* width: 70%; */
-  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing main {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   text-align: center;
 }
 
-.landing h2, .landing h1 {
+.landing main h2, .landing main h1 {
   color: white;
   text-shadow: 1px 3px 4px #79298e;
   font-family: 'Rock Salt', cursive;
 }
 
-.landing nav a {
+.landing main nav {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.landing main nav a {
   font-weight: lighter;
   font-family: 'Reenie Beanie', cursive;
   color:#323336; 
