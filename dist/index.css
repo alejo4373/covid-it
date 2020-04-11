@@ -52,6 +52,13 @@ body {
   /* line-height: 1.2em; */
 }
 
+.landing main p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.5em;
+  color:#323336; 
+  margin: 1em;
+}
+
 .section {
   background: 
     linear-gradient(rgb(239, 211, 159, 0.5),rgba(239, 211, 159, 0.3)), 
