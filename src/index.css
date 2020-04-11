@@ -3,20 +3,21 @@
   padding: 0;
 }
 
-html {
-  min-height: 100%;
-  background: 
-    linear-gradient(rgb(239, 211, 159, 0.5),rgba(239, 211, 159, 0.3)), 
-    url(./cork-bg.png); 
-  background-color: #e0b67b;
+html, body {
+  height: 100%;
 }
 
 body {
-  font-size: 100%
+  font-size: 100%;
+}
+
+.landing, .section {
+  height: 100%;
 }
 
 .landing {
   font-size: 3em;
+  background: linear-gradient(90deg, #f7315f,#d7385e);
   /* width: 70%; */
   /* margin: 0 auto; */
   text-align: center;
@@ -31,9 +32,17 @@ body {
 .landing nav a {
   font-weight: lighter;
   font-family: 'Reenie Beanie', cursive;
-  color: #f0325f;
+  color:#323336; 
   text-shadow: 1px 3px 4px #8c419f;
+  text-decoration: none;
   /* line-height: 1.2em; */
+}
+
+.section {
+  background: 
+    linear-gradient(rgb(239, 211, 159, 0.5),rgba(239, 211, 159, 0.3)), 
+    url(./cork-bg.png); 
+  background-color: #e0b67b;
 }
 
 main fieldset {
