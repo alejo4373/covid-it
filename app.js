@@ -15,8 +15,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/ilearned', (req, res, next) => {
-  console.log('i learned')
-  res.render('ilearned')
+  res.render('board', { title: "Have Learned..." })
+});
+
+app.use('/iwanttodo', (req, res, next) => {
+  res.render('board', { title: "Want to Do..." })
 });
 
 app.use('/', (req, res, next) => {
