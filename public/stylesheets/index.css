@@ -87,7 +87,7 @@ a {
 .section {
   background: 
     linear-gradient(rgb(239, 211, 159, 0.5),rgba(239, 211, 159, 0.3)), 
-    url(./cork-bg.png); 
+    url(/images/cork-bg.png); 
   background-color: #e0b67b;
 }
 

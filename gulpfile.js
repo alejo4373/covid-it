@@ -4,7 +4,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const autoprefixCss = (done) => {
   src('src/*.css')
     .pipe(autoprefixer({ cascade: false }))
-    .pipe(dest('dist'))
+    .pipe(dest('public/stylesheets'))
 
   done()
 }

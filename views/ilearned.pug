@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  main.section
+    a(href="/") Back
+    fieldset
+      legend
+        h2 We
+        h2 Have Learned...
+      ul
+        li
+          form.note
+            textarea(name="message" type="text" placeholder="Your message")
+            fieldset
+              input(name="name" type="text" placeholder="Your Name")
+              input(type="submit" value="Stick it!")
+        li.note(tabindex="0")
+            p Who are the real heroes
+            h5 Alejo
+          
+        li.note(tabindex="0")
+          p How imp ortant mindfulness is
+          h5 Mafe
+        
+        li.note(tabindex="0")
+          p That we are all one kind
+          h5 Luza
+        
+        li.note(tabindex="0")
+          p Who are the real heroes
+          h5 Alejo
+        
+        li.note(tabindex="0")
+          p How imp ortant mindfulness is
+          h5 Mafe
+        
+        li.note(tabindex="0")
+          p That we are all one kind
+          h5 Luza
+  script(src="/javascripts/form.js")
+        
+        

@@ -4,6 +4,8 @@
   "description": "A website to share something you want to do or something you learned after (and during) the covid-19 crisis",
   "main": "index.js",
   "scripts": {
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +29,14 @@
   "homepage": "https://github.com/alejo4373/aftercovid-19#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1"
+    "gulp-autoprefixer": "^7.0.1",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "pug": "^2.0.4"
   }
 }
