@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dbm:create": "db-migrate create --migrations-dir ./db/migrations --config ./db/database.json",
+    "dbm:up": "db-migrate up --migrations-dir ./db/migrations --config ./db/database.json",
+    "dbm:down": "db-migrate down --migrations-dir ./db/migrations --config ./db/database.json",
+    "dbm:reset": "db-migrate reset --migrations-dir ./db/migrations --config ./db/database.json"
   },
   "repository": {
     "type": "git",
@@ -36,6 +40,8 @@
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "cookie-parser": "~1.4.4",
+    "db-migrate": "^0.11.9",
+    "db-migrate-pg": "^1.2.1",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
