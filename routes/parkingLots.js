@@ -15,4 +15,17 @@ router.post('/', async (req, res, next) => {
   }
 })
 
+router.get('/', async (req, res, next) => {
+  try {
+    let lots = await ParkingLot.getAll();
+    res.json({
+      payload: lots,
+      message: "all lots retrieved",
+      error: false
+    })
+  } catch (err) {
+    next(err)
+  }
+})
+
 module.exports = router;

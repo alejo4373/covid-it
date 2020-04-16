@@ -10,6 +10,17 @@ const create = async (name) => {
   }
 }
 
+const getAll = async () => {
+  try {
+    let lots = await db.any("SELECT * FROM boards")
+    return lots
+  } catch (err) {
+    throw err;
+  }
+}
+
+
 module.exports = {
-  create
+  create,
+  getAll
 }
