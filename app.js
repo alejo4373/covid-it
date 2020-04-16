@@ -8,6 +8,9 @@ var autoprefixer = require('autoprefixer')
 
 var app = express();
 
+// Routers
+const parkingLots = require('./routes/parkingLots')
+
 app.set('view engine', 'pug')
 
 app.use(logger('dev'));
@@ -26,6 +29,7 @@ app.use('/stylesheets', postcssMiddleware({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/api/lots', parkingLots);
 app.use('/board/:id', (req, res, next) => {
   res.render('board', { title: "Sample Board" })
 });
