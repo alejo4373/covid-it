@@ -26,13 +26,10 @@ app.use('/stylesheets', postcssMiddleware({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/ilearned', (req, res, next) => {
-  res.render('board', { title: "Have Learned..." })
+app.use('/board/:id', (req, res, next) => {
+  res.render('board', { title: "Sample Board" })
 });
 
-app.use('/iwanttodo', (req, res, next) => {
-  res.render('board', { title: "Want to Do..." })
-});
 
 app.use('/', (req, res, next) => {
   res.render('index')
