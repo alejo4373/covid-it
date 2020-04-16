@@ -11,7 +11,7 @@ router.post('/', async (req, res, next) => {
       error: false
     })
   } catch (err) {
-    throw err
+    next(err)
   }
 })
 
