@@ -1,8 +1,8 @@
 {
-  "name": "aftercovid-19",
+  "name": "pursuit-parking-log-app",
   "version": "1.0.0",
-  "description": "A website to share something you want to do or something you learned after (and during) the covid-19 crisis",
-  "main": "index.js",
+  "description": "Trello like app that allow users creating parking lots(boards) and adding notes to it",
+  "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
@@ -10,23 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alejo4373/aftercovid-19.git"
+    "url": "git+https://github.com/alejo4373/Pursuit-Parking-Lot-App.git"
   },
   "keywords": [
-    "covid-19",
-    "covid",
-    "coronavirus",
+    "trello",
+    "boards",
+    "columns",
     "post-it",
     "notes",
     "sticky",
-    "website"
+    "website",
+    "parking-lot"
   ],
   "author": "@alejo4373",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alejo4373/aftercovid-19/issues"
+    "url": "https://github.com/alejo4373/Pursuit-Parking-Lot-App/issues"
   },
-  "homepage": "https://github.com/alejo4373/aftercovid-19#readme",
+  "homepage": "https://github.com/alejo4373/Pursuit-Parking-Lot-App#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

@@ -1,17 +1,5 @@
-# aftercovid-19
+# Pursuit Parking Lot App
 
-aftercovid-19 is a website where you can post a sticky note about something you want to do or something you learned after (and during) covid-19 for you to share with the world.
+The Pursuit Parking Lot App is a Trello like website. Users can create parking lots (boards) add lanes (columns) and post sticky notes in parking lots about anything they want.
 
-The intent is to reflect about what covid-19 has meant for you, your loved ones, how it changed your perception of the world as well as what you want to do with that earned perspective.
-
-### Examples:
-
-#### I have learned
-* Healthcare workers are the real heroes!
-* Our small collective actions matter and make an impact.
-* How to build a website
-
-#### I want to do 
-* Start planting a forest or contribute to an already existing one.
-* Visit my sisters, embrace them and tell them I love them.
-* Learn to swim.
+It is mainly intended to share questions or feedback. Feedback can be about a lesson or workshops, which makes a great classroom tool. It can also be used during panels or site visits to share and gather questions and feedback from an audience and have a live feed of that attendees are sharing. 
