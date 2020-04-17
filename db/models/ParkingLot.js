@@ -19,6 +19,26 @@ const getAll = async () => {
   }
 }
 
+const addLane = async (lane) => {
+  const newLaneQuery = `
+    INSERT INTO lanes(name, board_id)
+      VALUES($/name/, $/board_id/)
+      RETURNING * 
+  `
+
+  try {
+    const newLane = await db.one(newLaneQuery, lane)
+    return newLane
+  } catch (err) {
+    throw err;
+  }
+}
+
+
+
+
+
+
 
 module.exports = {
   create,
