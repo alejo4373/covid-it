@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  main.section
+    a(href="/") Back
+    fieldset
+      legend
+        h2 #{lot.name}
+      ul
+        li
+          form.note
+            textarea(name="message" type="text" placeholder="Your message")
+            fieldset
+              input(name="name" type="text" placeholder="Your Name")
+              input(type="submit" value="Stick it!")
+        each note in notes
+          li.note(tabindex="0")
+              p #{note.message}
+              h5 #{note.username}
+
+  script(src="/javascripts/form.js")
+        
+        

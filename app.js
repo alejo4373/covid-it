@@ -12,7 +12,7 @@ var app = express();
 const parkingLots = require('./routes/parkingLots')
 
 // Controllers
-const { renderIndex } = require('./controllers/Lots')
+const { renderIndex, renderLot } = require('./controllers/Lots')
 app.set('view engine', 'pug')
 
 app.use(logger('dev'));
@@ -31,12 +31,11 @@ app.use('/stylesheets', postcssMiddleware({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Api Endpoints
 app.use('/api/lots', parkingLots);
-app.use('/board/:id', (req, res, next) => {
-  res.render('board', { title: "Sample Board" })
-});
 
-
+// Website Endpoints
+app.use('/lots/:lot_id', renderLot);
 app.use('/', renderIndex)
 
 module.exports = app;
