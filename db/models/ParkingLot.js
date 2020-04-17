@@ -60,7 +60,7 @@ const addNote = async (note) => {
 
 const getNotes = async (lot_id) => {
   const getNotesQuery = `
-    SELECT notes.* from notes
+    SELECT notes.*, lanes.name AS lane_name FROM notes
       JOIN lanes ON notes.lane_id = lanes.id
       JOIN lots ON lanes.lot_id = lots.id
       WHERE lots.id = $/lot_id/

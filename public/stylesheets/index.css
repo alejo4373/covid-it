@@ -92,8 +92,13 @@ h5, p {
   font-size: 100%;
   font-weight: normal; }
 
-ul, li {
+.lane, .note {
   list-style: none; }
+
+.lane {
+  width: max-content;
+  display: inline-block;
+  vertical-align: top; }
 
 #notes {
   padding: 3em;
@@ -105,7 +110,6 @@ ul, li {
   width: 10em;
   padding: 1em;
   margin: 1em;
-  float: left;
   display: grid;
   grid-template-rows: auto 1em;
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
@@ -114,17 +118,17 @@ ul, li {
   color: white;
   text-shadow: 1px 3px 4px #79298e; }
 
-.note:nth-child(even) {
+.lane:nth-child(odd) .note:nth-child(even) {
   transform: rotate(4deg);
   position: relative;
-  top: 5px; }
+  top: 10px; }
 
-.note:nth-child(3n) {
+.lane:nth-child(2n) .note:nth-child(3n) {
   transform: rotate(-3deg);
   position: relative;
-  top: -5px; }
+  top: 10px; }
 
-.note:nth-child(5n) {
+.lane:nth-child(3n) .note:nth-child(5n) {
   transform: rotate(5deg);
   position: relative;
   top: 10px; }
