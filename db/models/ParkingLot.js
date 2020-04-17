@@ -19,6 +19,15 @@ const getAll = async () => {
   }
 }
 
+const getById = async (lot_id) => {
+  try {
+    let lots = await db.one("SELECT * FROM lots WHERE id = $/lot_id/", { lot_id })
+    return lots
+  } catch (err) {
+    throw err;
+  }
+}
+
 const addLane = async (lane) => {
   const newLaneQuery = `
     INSERT INTO lanes(name, lot_id)
@@ -68,6 +77,7 @@ const getNotes = async (lot_id) => {
 module.exports = {
   create,
   getAll,
+  getById,
   addNote,
   addLane,
   getNotes
