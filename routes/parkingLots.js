@@ -34,7 +34,7 @@ router.post('/:lotId/lanes', async (req, res, next) => {
     let newLane = await ParkingLot.addLane(lane);
     res.json({
       payload: newLane,
-      message: `added new lane to lot: %{lotId}`,
+      message: `added new lane to lot: ${lotId}`,
       error: false
     })
   } catch (err) {
