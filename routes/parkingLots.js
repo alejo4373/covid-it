@@ -31,7 +31,7 @@ router.get('/', async (req, res, next) => {
 router.post('/:lotId/lanes', async (req, res, next) => {
   const { name } = req.body;
   const { lotId } = req.params;
-  const lane = { name, board_id: lotId }
+  const lane = { name, lot_id: lotId }
 
   try {
     let newLane = await ParkingLot.addLane(lane);

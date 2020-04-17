@@ -1,7 +1,7 @@
 {
   "name": "pursuit-parking-log-app",
   "version": "1.0.0",
-  "description": "Trello like app that allow users creating parking lots(boards) and adding notes to it",
+  "description": "Trello like app that allow users creating parking lots(lots) and adding notes to it",
   "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
@@ -18,7 +18,7 @@
   },
   "keywords": [
     "trello",
-    "boards",
+    "lots",
     "columns",
     "post-it",
     "notes",

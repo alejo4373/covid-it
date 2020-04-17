@@ -6,7 +6,7 @@ CREATE TABLE "notes" (
   "created_at" TIMESTAMPTZ DEFAULT NOW()
 );
 
-CREATE TABLE "boards" (
+CREATE TABLE "lots" (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR
 );
@@ -14,8 +14,8 @@ CREATE TABLE "boards" (
 CREATE TABLE "lanes" (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR,
-  "board_id" INT
+  "lot_id" INT
 );
 
 ALTER TABLE "notes" ADD FOREIGN KEY ("lane_id") REFERENCES "lanes" ("id");
-ALTER TABLE "lanes" ADD FOREIGN KEY ("board_id") REFERENCES "boards" ("id");
+ALTER TABLE "lanes" ADD FOREIGN KEY ("lot_id") REFERENCES "lots" ("id");
