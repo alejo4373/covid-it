@@ -47,11 +47,12 @@ router.post('/:lot_id/lanes', async (req, res, next) => {
 
 router.post('/:lot_id/notes', async (req, res, next) => {
   const note = req.body
+  const { lot_id } = req.params
   try {
     let newNote = await ParkingLot.addNote(note);
     res.json({
       payload: newNote,
-      message: `added new note to lot: ${lot_id}`,
+      message: `added new note to lot: ${lot_id}, lane: ${note.lane_id}`,
       error: false
     })
   } catch (err) {
