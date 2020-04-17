@@ -28,16 +28,16 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-router.post('/:lotId/lanes', async (req, res, next) => {
+router.post('/:lot_id/lanes', async (req, res, next) => {
   const { name } = req.body;
-  const { lotId } = req.params;
-  const lane = { name, lot_id: lotId }
+  const { lot_id } = req.params;
+  const lane = { name, lot_id: lot_id }
 
   try {
     let newLane = await ParkingLot.addLane(lane);
     res.json({
       payload: newLane,
-      message: `added new lane to lot: ${lotId}`,
+      message: `added new lane to lot: ${lot_id}`,
       error: false
     })
   } catch (err) {
@@ -45,13 +45,13 @@ router.post('/:lotId/lanes', async (req, res, next) => {
   }
 })
 
-router.post('/:lotId/notes', async (req, res, next) => {
+router.post('/:lot_id/notes', async (req, res, next) => {
   const note = req.body
   try {
     let newNote = await ParkingLot.addNote(note);
     res.json({
       payload: newNote,
-      message: `added new note to lot: ${lotId}`,
+      message: `added new note to lot: ${lot_id}`,
       error: false
     })
   } catch (err) {
