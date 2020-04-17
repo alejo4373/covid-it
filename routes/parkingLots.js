@@ -42,5 +42,18 @@ router.post('/:lotId/lanes', async (req, res, next) => {
   }
 })
 
+router.post('/:lotId/notes', async (req, res, next) => {
+  const note = req.body
+  try {
+    let newNote = await ParkingLot.addNote(note);
+    res.json({
+      payload: newNote,
+      message: `added new note to lot: ${lotId}`,
+      error: false
+    })
+  } catch (err) {
+    next(err)
+  }
+})
 
 module.exports = router;

@@ -34,13 +34,24 @@ const addLane = async (lane) => {
   }
 }
 
+const addNote = async (note) => {
+  const newNoteQuery = `
+    INSERT INTO notes(message, username, lane_id)
+      VALUES($/message/, $/username/, $/lane_id/)
+      RETURNING *
+  `
 
-
-
-
-
+  try {
+    const newNote = await db.one(newNoteQuery, note)
+    return newNote
+  } catch (err) {
+    throw err;
+  }
+}
 
 module.exports = {
   create,
-  getAll
+  getAll,
+  addNote,
+  addLane
 }
