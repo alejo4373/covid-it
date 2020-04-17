@@ -29,7 +29,10 @@ router.get('/', async (req, res, next) => {
 })
 
 router.post('/:lotId/lanes', async (req, res, next) => {
-  const lane = req.body
+  const { name } = req.body;
+  const { lotId } = req.params;
+  const lane = { name, board_id: lotId }
+
   try {
     let newLane = await ParkingLot.addLane(lane);
     res.json({
@@ -55,5 +58,4 @@ router.post('/:lotId/notes', async (req, res, next) => {
     next(err)
   }
 })
-
 module.exports = router;
