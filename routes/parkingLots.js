@@ -45,6 +45,20 @@ router.post('/:lot_id/lanes', async (req, res, next) => {
   }
 })
 
+router.get('/:lot_id/notes', async (req, res, next) => {
+  const { lot_id } = req.params
+  try {
+    let notes = await ParkingLot.getNotes(lot_id);
+    res.json({
+      payload: notes,
+      message: `retrieved all notes for lot: ${lot_id}`,
+      error: false
+    })
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.post('/:lot_id/notes', async (req, res, next) => {
   const note = req.body
   const { lot_id } = req.params

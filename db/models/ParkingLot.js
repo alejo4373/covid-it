@@ -49,9 +49,26 @@ const addNote = async (note) => {
   }
 }
 
+const getNotes = async (lot_id) => {
+  const getNotesQuery = `
+    SELECT notes.* from notes
+      JOIN lanes ON notes.lane_id = lanes.id
+      JOIN lots ON lanes.lot_id = lots.id
+      WHERE lots.id = $/lot_id/
+  `
+
+  try {
+    const notes = await db.any(getNotesQuery, { lot_id })
+    return notes
+  } catch (err) {
+    throw err;
+  }
+}
+
 module.exports = {
   create,
   getAll,
   addNote,
-  addLane
+  addLane,
+  getNotes
 }
