@@ -5,7 +5,9 @@ block content
     main
       .centered
         h1 Pursuit Parking Lot App
-        nav
-          a(href="/board/1") Sample Board
+        ul
+          each lot in lots
+            li
+              a(href=`/lots/${lot.id}`) #{lot.name}
     footer
       span Made with ❤️ by #[a(href="https://github.com/alejo4373") @alejo4373]

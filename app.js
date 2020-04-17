@@ -11,6 +11,8 @@ var app = express();
 // Routers
 const parkingLots = require('./routes/parkingLots')
 
+// Controllers
+const { renderIndex } = require('./controllers/Lots')
 app.set('view engine', 'pug')
 
 app.use(logger('dev'));
@@ -35,8 +37,6 @@ app.use('/board/:id', (req, res, next) => {
 });
 
 
-app.use('/', (req, res, next) => {
-  res.render('index')
-});
+app.use('/', renderIndex)
 
 module.exports = app;
