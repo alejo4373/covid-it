@@ -32,7 +32,7 @@ app.use('/stylesheets', postcssMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Api Endpoints
-app.use('/api/lots', parkingLots);
+app.use('/api/v1/lots', parkingLots);
 
 // Website Endpoints
 app.use('/lots/:lot_id', renderLot);
