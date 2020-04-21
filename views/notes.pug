@@ -11,8 +11,14 @@ block content
           form.note
             textarea(name="message" type="text" placeholder="Your message")
             fieldset
-              input(name="name" type="text" placeholder="Your Name")
+              input(name="username" type="text" placeholder="Your Name")
+              input(name="category" type="text" value=`${category}` hidden)
               input(type="submit" value="Stick it!")
+
+              //- TODO remove defaults and allow user to enter these values
+              input(name="language" type="text" value="english" hidden)
+              input(name="country" type="text" value="us" hidden)
+              input(name="city" type="text" value="nyc" hidden)
               
         each note in notes
           li.note(tabindex="0")

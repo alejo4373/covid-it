@@ -17,7 +17,7 @@ const renderNotes = async (req, res, next) => {
   }
 
   const notes = await Notes.getAllByCategory(category)
-  res.render('notes', { notes, title: formattedTitle })
+  res.render('notes', { notes, category, title: formattedTitle })
 }
 
 const renderIndex = (req, res, next) => {

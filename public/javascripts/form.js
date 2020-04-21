@@ -2,14 +2,33 @@
 const form = document.querySelector('form')
 form.addEventListener('submit', submitNewNote)
 
-function submitNewNote(e) {
+async function submitNewNote(e) {
   e.preventDefault()
 
   const formData = new FormData(form)
-  const json = {}
-  formData.forEach((value, key) => json[key] = value)
+  const noteData = {}
+  formData.forEach((value, key) => noteData[key] = value)
+  const newNote = await postNote(noteData)
+  appendNote(newNote)
   clearInputs()
-  appendNote(json)
+}
+
+async function postNote(note) {
+  try {
+    const res = await fetch('/api/v1/notes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(note)
+    })
+
+    const data = await res.json()
+    return data.payload;
+  } catch (err) {
+    window.alert('Ooops there was an error. Please check back later')
+    console.log('err')
+  }
 }
 
 function clearInputs() {
@@ -25,11 +44,11 @@ function appendNote(note) {
   newNote.classList.add('note')
 
   const name = document.createElement('h5')
-  name.innerText = note.name
+  name.innerText = note.username
 
   const message = document.createElement('p')
   message.innerText = note.message
 
   newNote.append(message, name);
-  notes.append(newNote);
+  notes.insertBefore(newNote, notes.childNodes[1]);
 }
