@@ -4,10 +4,10 @@ block content
   .landing
     main
       .centered
-        h1 Pursuit Parking Lot App
+        h1 Pursuit Parking note App
         ul
-          each lot in lots
+          each note in notes
             li
-              a(href=`/lots/${lot.id}`) #{lot.name}
+              a(href=`/notes/${note.id}`) #{note.name}
     footer
       span Made with ❤️ by #[a(href="https://github.com/alejo4373") @alejo4373]

@@ -1,3 +1,3 @@
 module.exports = {
-  ParkingLot: require('./ParkingLot')
+  Notes: require('./Notes')
 }

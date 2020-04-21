@@ -8,11 +8,12 @@ var autoprefixer = require('autoprefixer')
 
 var app = express();
 
-// Routers
-const parkingLots = require('./routes/parkingLots')
+// Web Controllers
+const { renderIndex, renderNotes } = require('./controllers/web/notes')
 
-// Controllers
-const { renderIndex, renderLot } = require('./controllers/Lots')
+// Api Controllers
+const notesApiController = require('./controllers/api/notes')
+
 app.set('view engine', 'pug')
 
 app.use(logger('dev'));
@@ -32,10 +33,10 @@ app.use('/stylesheets', postcssMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Api Endpoints
-app.use('/api/v1/lots', parkingLots);
+app.use('/api/v1/notes', notesApiController);
 
 // Website Endpoints
-app.use('/lots/:lot_id', renderLot);
+app.use('/notes/:note_id', renderNotes);
 app.use('/', renderIndex)
 
 module.exports = app;
