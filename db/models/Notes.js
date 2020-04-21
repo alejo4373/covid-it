@@ -25,7 +25,7 @@ const getAll = async () => {
 
 const getAllByCategory = async (category) => {
   try {
-    let query = "SELECT * FROM notes WHERE category = $/category/"
+    let query = "SELECT * FROM notes WHERE category = $/category/ ORDER BY created_at DESC"
     let notes = await db.any(query, { category })
     return notes
   } catch (err) {
