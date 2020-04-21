@@ -1,3 +1,2 @@
 DROP TABLE notes;
-DROP TABLE lanes;
-DROP TABLE lots;
+DROP TYPE e_note_category;

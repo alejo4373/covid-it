@@ -17,4 +17,4 @@ The effects of covid-19 have been felt throughout the world, such an impactful e
 * Users are able to collaborate and discuss a note translation, through messages attached to individual notes.
 
 ## Database Schema Diagram
-![parking lot db schema diagram](./docs/assets/parking-lot-db-diagram.png)
+![covidit db schema diagram](./docs/assets/db-diagram.png)

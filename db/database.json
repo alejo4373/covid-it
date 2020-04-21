@@ -2,7 +2,7 @@
   "dev": {
     "driver": "pg",
     "host": "localhost",
-    "database": "parking_lots_app_dev_db",
+    "database": "covidit_dev_db",
     "schema": "public"
   },
   "sql-file": true

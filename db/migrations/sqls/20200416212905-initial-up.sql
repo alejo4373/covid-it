@@ -1,21 +1,16 @@
+CREATE TYPE e_note_category AS ENUM ('learned', 'wanttodo', 'gratefulfor');
+
 CREATE TABLE "notes" (
   "id" SERIAL PRIMARY KEY,
   "username" VARCHAR,
   "message" VARCHAR,
-  "lane_id" INT,
-  "created_at" TIMESTAMPTZ DEFAULT NOW()
+  "language" VARCHAR,
+  "created_at" TIMESTAMPTZ DEFAULT NOW(),
+  "category" e_note_category,
+  "translation_note" BOOLEAN DEFAULT FALSE,
+  "translated_note_note_id" INT,
+  "country" VARCHAR,
+  "city" VARCHAR
 );
 
-CREATE TABLE "lots" (
-  "id" SERIAL PRIMARY KEY,
-  "name" VARCHAR
-);
-
-CREATE TABLE "lanes" (
-  "id" SERIAL PRIMARY KEY,
-  "name" VARCHAR,
-  "lot_id" INT
-);
-
-ALTER TABLE "notes" ADD FOREIGN KEY ("lane_id") REFERENCES "lanes" ("id");
-ALTER TABLE "lanes" ADD FOREIGN KEY ("lot_id") REFERENCES "lots" ("id");
+ALTER TABLE "notes" ADD FOREIGN KEY ("translated_note_note_id") REFERENCES "notes" ("id");
