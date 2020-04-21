@@ -1,7 +1,7 @@
 {
-  "name": "pursuit-parking-log-app",
+  "name": "covidit",
   "version": "1.0.0",
-  "description": "Trello like app that allow users creating parking lots(lots) and adding notes to it",
+  "description": "A website to share aspirations, reflections and appreciations through a post it note with the world",
   "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
@@ -15,24 +15,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alejo4373/Pursuit-Parking-Lot-App.git"
+    "url": "git+https://github.com/alejo4373/covid-it.git"
   },
   "keywords": [
-    "trello",
-    "lots",
-    "columns",
     "post-it",
-    "notes",
     "sticky",
+    "notes",
+    "boards",
     "website",
-    "parking-lot"
+    "appreciations",
+    "aspirations",
+    "reflection"
   ],
   "author": "@alejo4373",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alejo4373/Pursuit-Parking-Lot-App/issues"
+    "url": "https://github.com/alejo4373/covid-it/issues"
   },
-  "homepage": "https://github.com/alejo4373/Pursuit-Parking-Lot-App#readme",
+  "homepage": "https://github.com/alejo4373/covid-it#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
