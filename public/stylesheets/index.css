@@ -15,7 +15,7 @@ a {
   height: 100%; }
 
 .landing {
-  background: linear-gradient(90deg, #f7315f, #d7385e); }
+  background: #F38181; }
 
 .landing main {
   font-size: 3em;
@@ -50,8 +50,9 @@ a {
 
 .landing main p {
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
   font-size: 0.5em;
-  color: #323336;
+  color: #30475E;
   margin: 2em; }
 
 .landing footer {
@@ -84,51 +85,45 @@ main fieldset legend {
 main fieldset legend h2 {
   font-family: 'Rock Salt', cursive;
   font-weight: lighter;
-  color: #f0325f;
-  text-shadow: 1px 3px 4px #8c419f;
+  color: #8f41a3;
   line-height: 1.2em; }
 
 h5, p {
   font-size: 100%;
   font-weight: normal; }
 
-.lane, .note {
+ul, li {
   list-style: none; }
-
-.lane {
-  width: max-content;
-  display: inline-block;
-  vertical-align: top; }
 
 #notes {
   padding: 3em;
   overflow: hidden; }
 
 .note {
-  background: linear-gradient(90deg, #f7315f, #d7385e);
+  background: #eaffd0;
   height: 10em;
   width: 10em;
   padding: 1em;
   margin: 1em;
+  float: left;
   display: grid;
   grid-template-rows: auto 1em;
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   transform: rotate(-6deg);
   transition: transform 0.15s linear;
-  color: white;
-  text-shadow: 1px 3px 4px #79298e; }
+  color: #30475E; }
 
-.lane:nth-child(odd) .note:nth-child(even) {
+.note:nth-child(even) {
   transform: rotate(4deg);
   position: relative;
-  top: 10px; }
+  top: 5px; }
 
-.lane:nth-child(2n) .note:nth-child(3n) {
+.note:nth-child(3n) {
   transform: rotate(-3deg);
   position: relative;
-  top: 10px; }
+  top: -5px; }
 
-.lane:nth-child(3n) .note:nth-child(5n) {
+.note:nth-child(5n) {
   transform: rotate(5deg);
   position: relative;
   top: 10px; }
@@ -161,8 +156,11 @@ form textarea {
   font-size: 180%; }
 
 form textarea::placeholder, input[type="text"]::placeholder {
-  color: rgba(255, 255, 255, 0.9);
+  color: #30475E;
   text-shadow: 1px 3px 4px #79298e; }
+
+form textarea {
+  color: #30475E; }
 
 form input[type="text"] {
   text-align: right; }

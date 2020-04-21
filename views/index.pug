@@ -4,10 +4,11 @@ block content
   .landing
     main
       .centered
-        h1 Pursuit Parking note App
-        ul
-          each note in notes
-            li
-              a(href=`/notes/${note.id}`) #{note.name}
+        h1 Covid-it
+        nav
+          a(href="/wanttodo") Want to Do
+          a(href="/learned") Learned
+          a(href="/gratefulfor") Grateful For
+        p Share a note with the world about something you want to do, something you learned and something you are grateful for after (and during) the Covid-19 Pandemic. 
     footer
       span Made with ❤️ by #[a(href="https://github.com/alejo4373") @alejo4373]
