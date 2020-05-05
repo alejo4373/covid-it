@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/notes', notesApiController);
 
 // Website Endpoints
-app.use('/:category', renderNotes);
+app.use('/:board_name', renderNotes);
 app.use('/', renderIndex)
 
 module.exports = app;
