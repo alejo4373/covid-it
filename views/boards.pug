@@ -1,0 +1,22 @@
+extends layout
+
+append head
+    link(rel='stylesheet' type='text/css' href='/stylesheets/notes.css')
+    
+block content
+  main.section
+    a(href="/") Back
+    fieldset
+      legend
+        h2 #{title}
+      ul
+        li
+          form
+            input(name="board_name" type="text" placeholder="New board")
+            input(type="submit" value="Create!")
+              
+        each board in boards
+          li
+            p #{board.name}
+        
+        

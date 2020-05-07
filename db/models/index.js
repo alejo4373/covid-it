@@ -1,3 +1,4 @@
 module.exports = {
-  Notes: require('./Notes')
+  Notes: require('./Notes'),
+  Boards: require('./Boards')
 }
