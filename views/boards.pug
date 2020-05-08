@@ -1,20 +1,19 @@
 extends layout
 
 append head
-    link(rel='stylesheet' type='text/css' href='/stylesheets/notes.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/boards.css')
     
 block content
-  main.section
+  main.section.boards
     a(href="/") Back
     fieldset
       legend
         h2 #{title}
-      ul
-        li
-          form(action="/boards" method="post")
+      form(action="/boards" method="post")
             input(name="board_name" type="text" placeholder="New board")
             input(type="submit" value="Create!")
-              
+
+      ul
         each board in boards
           li
             a(href=`/boards/${board.id}/${board.name}`) #{board.name}
