@@ -16,7 +16,7 @@ const renderBoard = async (req, res, next) => {
     return res.redirect(`/boards/${board_id}/${board.name}`)
   }
 
-  res.render('Notes', {
+  res.render('notes', {
     title: board.name,
     board_id,
     notes
