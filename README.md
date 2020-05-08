@@ -21,8 +21,7 @@ The effects of covid-19 have been felt throughout the world, such an impactful e
 
 ## Client Pages
 
-| Page                   | Description                                   |
-| ---------------------- | --------------------------------------------- |
-| `/boards`              | List a user's boards                          |
-| `/boards/<board_name>` | Access a specific board by name and its notes |
-| `/boards/new`          | add new board                                 |
+| Page                      | Description                                                           |
+| ------------------------- | --------------------------------------------------------------------- |
+| `/boards`                 | List a user's boards                                                  |
+| `/boards/:id/:board_name` | Access a specific board by id and optional name for user friendliness |
