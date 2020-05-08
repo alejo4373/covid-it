@@ -14,6 +14,15 @@ const add = async (board) => {
   }
 }
 
+const getById = async (id) => {
+  try {
+    let board = await db.oneOrNone("SELECT * FROM boards WHERE id = $1", id)
+    return board
+  } catch (err) {
+    throw err;
+  }
+}
+
 const getAll = async () => {
   try {
     let boards = await db.any("SELECT * FROM boards")
@@ -25,5 +34,6 @@ const getAll = async () => {
 
 module.exports = {
   add,
+  getById,
   getAll
 }

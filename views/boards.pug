@@ -11,12 +11,12 @@ block content
         h2 #{title}
       ul
         li
-          form
+          form(action="/boards" method="post")
             input(name="board_name" type="text" placeholder="New board")
             input(type="submit" value="Create!")
               
         each board in boards
           li
-            p #{board.name}
+            a(href=`/boards/${board.id}/${board.name}`) #{board.name}
         
         
