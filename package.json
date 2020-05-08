@@ -11,7 +11,7 @@
     "dbm:up": "db-migrate up --migrations-dir ./db/migrations --config ./db/database.json",
     "dbm:down": "db-migrate down --migrations-dir ./db/migrations --config ./db/database.json",
     "dbm:reset": "db-migrate reset --migrations-dir ./db/migrations --config ./db/database.json",
-    "heroku-prebuild": "npm run dbm:up"
+    "heroku-postbuild": "npm run dbm:up"
   },
   "repository": {
     "type": "git",
