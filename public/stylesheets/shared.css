@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  background-color: #e0b67b; }
+
+body {
+  font-size: 100%; }
+
+a {
+  text-decoration: none; }
+
+.section {
+  background: linear-gradient(rgba(239, 211, 159, 0.5), rgba(239, 211, 159, 0.3)), url(/images/cork-bg.png);
+  min-height: 100vh; }
+
+main fieldset {
+  border: 20px groove #e7bd83;
+  width: 80%;
+  margin: 0 auto; }
+
+main fieldset legend {
+  margin: 0 20px;
+  font-size: 2em;
+  padding: 0 20px; }
+
+main fieldset legend h2 {
+  font-family: 'Rock Salt', cursive;
+  font-weight: lighter;
+  color: #8f41a3;
+  line-height: 1.2em; }
+
+h5, p {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul, li {
+  list-style: none; }

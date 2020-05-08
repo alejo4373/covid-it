@@ -11,6 +11,9 @@ var app = express();
 // Web Controllers
 const { renderIndex, renderNotes } = require('./controllers/web/notes')
 
+// Web Routers
+const boardsRouter = require('./routers/boards');
+
 // Api Controllers
 const notesApiController = require('./controllers/api/notes')
 
@@ -36,7 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/notes', notesApiController);
 
 // Website Endpoints
-app.use('/:category', renderNotes);
+app.use('/boards', boardsRouter);
+app.use('/:board_name', renderNotes);
 app.use('/', renderIndex)
 
 module.exports = app;

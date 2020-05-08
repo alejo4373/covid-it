@@ -2,8 +2,8 @@ const { db } = require('../pgp')
 
 const add = async (note) => {
   const insertNoteQuery = `
-    INSERT INTO notes (message, username, language, category, country, city)
-      VALUES ($/message/, $/username/, $/language/, $/category/, $/country/, $/city/) 
+    INSERT INTO notes (message, username, language, board_id, country, city)
+      VALUES ($/message/, $/username/, $/language/, $/board_id/, $/country/, $/city/) 
       RETURNING *
   `
   try {
@@ -23,10 +23,10 @@ const getAll = async () => {
   }
 }
 
-const getAllByCategory = async (category) => {
+const getAllByBoardId = async (board_id) => {
   try {
-    let query = "SELECT * FROM notes WHERE category = $/category/ ORDER BY created_at DESC"
-    let notes = await db.any(query, { category })
+    let query = "SELECT * FROM notes WHERE board_id = $/board_id/ ORDER BY created_at DESC"
+    let notes = await db.any(query, { board_id })
     return notes
   } catch (err) {
     throw err;
@@ -47,5 +47,5 @@ module.exports = {
   add,
   getAll,
   getById,
-  getAllByCategory,
+  getAllByBoardId,
 }

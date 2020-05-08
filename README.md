@@ -18,3 +18,10 @@ The effects of covid-19 have been felt throughout the world, such an impactful e
 
 ## Database Schema Diagram
 ![covidit db schema diagram](./docs/assets/db-diagram.png)
+
+## Client Pages
+
+| Page                      | Description                                                           |
+| ------------------------- | --------------------------------------------------------------------- |
+| `/boards`                 | List a user's boards                                                  |
+| `/boards/:id/:board_name` | Access a specific board by id and optional name for user friendliness |
