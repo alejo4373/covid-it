@@ -59,15 +59,33 @@ html, body {
 
 .landing footer {
   font-family: 'Source Sans Pro', sans-serif;
-  width: 100%;
+  width: 97%;
   background-color: #323336; 
   color: whitesmoke;
   height: 5%;
   display: flex;
   align-items: center;
-  padding: 0 1em;
+  padding-left: 3%;
 }
 
 .landing footer a {
   font-size: 0.7em
+}
+
+@media screen and (max-width: 1080px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .landing main {
+    font-size: 8vw;
+  }
+}
+
+@media screen and (max-height: 414px) {
+  .landing {
+    height: auto;
+  }
 }
