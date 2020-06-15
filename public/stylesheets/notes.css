@@ -84,3 +84,7 @@ form input[type="submit"]:hover {
 form input[type="submit"]:active {
   position: relative;
   top: 1px; }
+
+@media screen and (max-width: 590px) {
+  .notes .note {
+    font-size: 1.3em; } }
