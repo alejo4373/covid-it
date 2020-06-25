@@ -32,7 +32,7 @@ async function postNote(note) {
 }
 
 function clearInputs() {
-  const name = document.querySelector('input[name="name"]')
+  const name = document.querySelector('input[name="username"]')
   const message = document.querySelector('textarea[name="message"]')
   name.value = ''
   message.value = ''
@@ -51,4 +51,5 @@ function appendNote(note) {
 
   newNote.append(message, name);
   notes.insertBefore(newNote, notes.childNodes[1]);
+  styleScrollableNotes()
 }

@@ -43,7 +43,22 @@
 
 .note p {
   font-family: 'Reenie Beanie', cursive;
-  font-size: 180%; }
+  font-size: 180%;
+  overflow: scroll; }
+
+.scrollable-note {
+  box-shadow: inset 0px -15px 11px -19px #9c752c; }
+
+.scrollable-note::-webkit-scrollbar {
+  width: 6px;
+  display: none; }
+
+.scrollable-note:hover::-webkit-scrollbar:vertical {
+  display: unset; }
+
+.scrollable-note::-webkit-scrollbar-thumb {
+  background-color: #e7bd8375;
+  border-radius: 20px; }
 
 form fieldset {
   border: 0; }
