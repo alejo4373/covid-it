@@ -4,7 +4,6 @@ const styleScrollableNotes = () => {
   notes.forEach(note => {
     let textarea = note.firstElementChild
     if (textarea.scrollHeight > textarea.clientHeight + 4) { // ~4px difference does not need to make it scrollable
-      console.log('sH:', textarea.scrollHeight, '>', 'cH:', textarea.clientHeight)
       textarea.classList.add('scrollable-note')
     }
   })
