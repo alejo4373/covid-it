@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const { Notes } = require('../../db/models');
+const webSockets = require('../../webSockets')
 
 router.post('/', async (req, res, next) => {
   const note = req.body
@@ -10,6 +11,13 @@ router.post('/', async (req, res, next) => {
       message: "new note created",
       error: false
     })
+
+    const { clientSockets } = req.app.locals
+    webSockets.broadcast(clientSockets, {
+      type: "NEW_NOTE_ADDED",
+      payload: newNote
+    })
+
   } catch (err) {
     next(err)
   }
