@@ -24,7 +24,7 @@ block content
               input(name="city" type="text" value="nyc" hidden)
               
         each note in notes
-          li.note(tabindex="0")
+          li.note(tabindex="0" id=`note-${note.id}`)
               p #{note.message}
               h5 #{note.username}        
 

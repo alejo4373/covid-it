@@ -39,8 +39,14 @@ function clearInputs() {
 }
 
 function appendNote(note) {
+  // To eliminate duplicate same notes being appended due to the fact that 
+  // they can be appended as the result of the fetch call or the websocket handler
+  const noteAlreadyAppended = document.querySelector(`#note-${note.id}`)
+  if (noteAlreadyAppended) return;
+
   const notes = document.querySelector('ul')
   const newNote = document.createElement('li')
+  newNote.id = `note-${note.id}`
   newNote.classList.add('note')
 
   const name = document.createElement('h5')
@@ -53,3 +59,28 @@ function appendNote(note) {
   notes.insertBefore(newNote, notes.childNodes[1]);
   styleScrollableNotes()
 }
+
+
+const ws = new WebSocket(`ws://${location.host}`)
+
+ws.addEventListener('message', (e) => {
+  const { type, payload } = JSON.parse(e.data)
+  switch (type) {
+    case "NEW_NOTE_ADDED":
+      appendNote(payload)
+      break;
+    case "SUCCESSFULLY_CONNECTED":
+      console.log('Websocket connected')
+      break;
+    default:
+      alert('There was an error')
+  }
+})
+
+ws.addEventListener('close', (e) => {
+  //Reconnect to the websocket server in case the connection is lost
+  let reload = window.confirm('Connection lost. App will reload')
+  if (reload) {
+    location.reload()
+  }
+})

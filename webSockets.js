@@ -13,7 +13,6 @@ const broadcast = (clients, data) => {
 }
 
 function heartBeat() {
-  console.log('heartBeat =>')
   this.isAlive = true
 }
 
@@ -42,15 +41,19 @@ const init = ({ server, app }) => {
     })
 
     sendTo(socket, {
-      type: "CONNECTED_SUCCESSFULLY"
+      type: "SUCCESSFULLY_CONNECTED"
     })
   })
 
-  const THIRTY_SECONDS = 1000 * 30;
+  const THIRTY_SECONDS = 1000 * 10;
+
   const intId = setInterval(() => {
     wss.clients.forEach(client => {
       if (!client.isAlive) {
-        client.pin
+        client.terminate()
+      } else {
+        client.isAlive = false;
+        client.ping()
       }
     })
   }, THIRTY_SECONDS)
