@@ -61,7 +61,8 @@ function appendNote(note) {
 }
 
 
-const ws = new WebSocket(`ws://${location.host}`)
+const WS_PROTOCOL = location.hostname === 'localhost' ? 'ws' : 'wss';
+const ws = new WebSocket(`${WS_PROTOCOL}://${location.host}`)
 
 ws.addEventListener('message', (e) => {
   const { type, payload } = JSON.parse(e.data)
