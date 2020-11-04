@@ -5,7 +5,12 @@ append head
     
 block content
   main.section.notes
-    a(href="/") Back
+    nav.navbar
+      a(href="/" title="Home")
+        img.icon(src="/images/icon.png")
+      a(href="/wanttodo" class=(board_name === "wanttodo" ? "active" : "")) Want to Do
+      a(href="/learned" class=(board_name === "learned" ? "active" : "")) Learned
+      a(href="/gratefulfor" class=(board_name === "gratefulfor" ? "active" : "")) Grateful For
     fieldset.list-container
       legend
         h2 #{title}

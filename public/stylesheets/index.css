@@ -32,7 +32,8 @@ html, body {
   font-family: 'Reenie Beanie', cursive;
   color: #323336;
   font-size: 1.3em;
-  text-shadow: 1px 3px 4px #8c419f; }
+  text-shadow: 1px 3px 4px #8c419f;
+  text-decoration: none; }
 
 .landing main nav a:hover {
   text-shadow: 2px 2px 10px #8c419f,  -2px -2px 10px #8c419f, 2px 2px 1px white;
