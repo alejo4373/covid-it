@@ -12,9 +12,9 @@ block content
       ul
         li
           form.note
-            textarea(name="message" type="text" placeholder="Your message")
+            textarea(name="message" type="text" placeholder="Your message" required)
             fieldset
-              input(name="username" type="text" placeholder="Your Name")
+              input(name="username" type="text" placeholder="Your Name" required)
               input(name="board_id" type="text" value=`${board_id}` hidden)
               input(type="submit" value="Stick it!")
 
