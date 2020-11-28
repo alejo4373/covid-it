@@ -12,8 +12,9 @@ const renderBoard = async (req, res, next) => {
     Notes.getAllByBoardId(board_id)
   ])
 
+  const escapedBoardName = req.app.locals.URLEncode(board.name)
   if (!board_name || board_name !== board.name) {
-    return res.redirect(`/boards/${board_id}/${board.name}`)
+    return res.redirect(`/boards/${board_id}/${escapedBoardName}`)
   }
 
   res.render('notes', {

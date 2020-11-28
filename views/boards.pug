@@ -16,6 +16,6 @@ block content
       ul
         each board in boards
           li
-            a(href=`/boards/${board.id}/${board.name}`) #{board.name}
+            a(href=`/boards/${board.id}/${URLEncode(board.name)}`) #{board.name}
         
         

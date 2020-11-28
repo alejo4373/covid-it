@@ -5,6 +5,7 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware')
 var postcssMiddleware = require('postcss-middleware')
 var autoprefixer = require('autoprefixer')
+var URLEncode = require('querystring').escape
 
 var app = express();
 
@@ -18,6 +19,7 @@ const boardsRouter = require('./routers/boards');
 const notesApiController = require('./controllers/api/notes')
 
 app.set('view engine', 'pug')
+app.locals.URLEncode = URLEncode
 
 app.use(logger('dev'));
 app.use(express.json());
