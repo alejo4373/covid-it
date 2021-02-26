@@ -25,7 +25,7 @@ const getAll = async () => {
 
 const getAllByBoardId = async (board_id) => {
   try {
-    let query = "SELECT * FROM notes WHERE board_id = $/board_id/ ORDER BY created_at DESC"
+    let query = "SELECT * FROM notes WHERE board_id = $/board_id/ ORDER BY created_at ASC"
     let notes = await db.any(query, { board_id })
     return notes
   } catch (err) {

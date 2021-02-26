@@ -56,7 +56,7 @@ function appendNote(note) {
   message.innerText = note.message
 
   newNote.append(message, name);
-  notes.insertBefore(newNote, notes.childNodes[1]);
+  notes.append(newNote);
   styleScrollableNotes()
 }
 
