@@ -1,0 +1,29 @@
+extends ../layout
+
+append head
+    link(rel='stylesheet' type='text/css' href='/stylesheets/notes.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/boards/create.css')
+    
+block content
+  main.section.notes
+    nav.navbar
+      a(href="/" title="Home")
+        img.icon(src="/images/icon.png")
+      a(href="/wanttodo" class=(board_name === "wanttodo" ? "active" : "")) Want to Do
+      a(href="/learned" class=(board_name === "learned" ? "active" : "")) Learned
+      a(href="/gratefulfor" class=(board_name === "gratefulfor" ? "active" : "")) Grateful For
+    fieldset.list-container
+      legend
+        h2
+          input(name="board-name" placeholder="Your board's name" type="text" required)
+      ul
+        li
+          form.note
+            textarea(name="message" type="text" placeholder="Your message" required)
+            fieldset
+              input(name="username" type="text" placeholder="Your Name" required)
+              input(name="board_id" type="text" value=`${board_id}` hidden)
+              input(type="submit" value="Stick it!")
+
+        
+        

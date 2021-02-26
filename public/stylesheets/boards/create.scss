@@ -1,0 +1,12 @@
+h2 input[name=board-name] {
+  border: 2px dashed grey;
+  background: none;
+  font: inherit;
+  color: inherit; 
+  padding-left: 5px;
+}
+
+input[name=board-name]::placeholder {
+  color: rgba(165, 165, 165, 0.918);
+  opacity: 1;
+}

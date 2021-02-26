@@ -29,8 +29,13 @@ const addBoardAndRedirect = async (req, res, next) => {
   res.redirect(`/boards/${newBoard.id}/${newBoard.name}`)
 }
 
+const renderCreateBoard = async (req, res, next) => {
+  res.render('boards/create')
+}
+
 module.exports = {
   renderBoards,
   addBoardAndRedirect,
-  renderBoard
+  renderBoard,
+  renderCreateBoard
 }
