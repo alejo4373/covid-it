@@ -38,7 +38,8 @@
 }
 
 .note {
-  background: #eaffd0;
+  // background: #eaffd0;
+  background: #a67eb5; // Women's History Month (WHM) Theme 
   height: 10em;
   width: 10em;
   padding: 1em;
@@ -49,7 +50,9 @@
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   transform: rotate(-6deg);
   transition: transform 0.15s linear;
-  color:#30475E; 
+  color: white;  // WHM
+  text-shadow: 1px 3px 4px #79298e
+  // color:#30475E; 
 }
 
 .note:nth-child(even) {
@@ -87,12 +90,13 @@
 .note p {
   font-family: 'Reenie Beanie', cursive;
   font-size: 180%;
-  overflow: scroll;
+  height: 95%;
 }
 
 .scrollable-note {
-  box-shadow: inset 0px -15px 11px -19px rgb(156, 117, 44); 
-  // scrollbar-width: thin; /* Firefox */
+  // box-shadow: inset 0px -15px 11px -19px rgb(156, 117, 44); 
+  box-shadow: inset 0px -15px 11px -19px #ffd890; // WHM
+  overflow: scroll;
 }
 
 .scrollable-note::-webkit-scrollbar {
@@ -116,22 +120,20 @@ form fieldset {
 form textarea, form input[type="text"] {
   width: 100%;
   background: transparent;
-  border: 0
+  border: 0;
+  color:rgb(255, 255, 255); // WHM
 }
 
 form textarea {
   resize: none;
   font-family: 'Reenie Beanie', cursive;
   font-size: 180%;
-}
-
-form textarea::placeholder, input[type="text"]::placeholder {
-  color:#30475E; 
   text-shadow: 1px 3px 4px #79298e
 }
 
-form textarea {
-  color:#30475E; 
+form textarea::placeholder, input[type="text"]::placeholder {
+  // color:#30475E; 
+  color:rgba(255, 255, 255, 0.8); // WHM
 }
 
 form input[type="text"] {
