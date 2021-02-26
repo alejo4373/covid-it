@@ -61,7 +61,13 @@ function appendNote(note) {
 }
 
 
-const WS_PROTOCOL = location.hostname === 'localhost' ? 'ws' : 'wss';
+let WS_PROTOCOL;
+if (location.hostname === 'localhost' || location.hostname.match(/192.168.*/)) {// Running in localhost or in local network
+  WS_PROTOCOL = 'ws'
+} else {
+  WS_PROTOCOL = 'wss';
+}
+
 const ws = new WebSocket(`${WS_PROTOCOL}://${location.host}`)
 
 ws.addEventListener('message', (e) => {
