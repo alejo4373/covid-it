@@ -42,7 +42,7 @@
     "db-migrate": "^0.11.9",
     "db-migrate-pg": "^1.2.1",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "~4.18.2",
     "morgan": "~1.9.1",
     "node-sass-middleware": "^0.11.0",
     "pg-promise": "^10.10.1",
